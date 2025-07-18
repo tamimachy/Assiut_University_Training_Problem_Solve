@@ -6,6 +6,7 @@ int main() {
     int temp = n;
     while(temp>0){
         re = re * 10 + temp%10;
+        cout << re << " ";
         temp = temp/10;
     }
     cout << re << "\n";
