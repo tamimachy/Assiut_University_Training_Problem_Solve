@@ -2,22 +2,20 @@
 #include <cmath>
 using namespace std;
 int main() {
-    int i, fib, result;
-    cin >> fib;
-    for(i=1;i<=fib;i++){
-        if(fib==1){
-            cout << 0 << " ";
-        }
-        if(fib==2){
-            cout << 1 << " ";
-        }
-        if(fib>2){
-            result = fib(i);
-            cout << 1 << " ";
+    int i, n, next_num, t1=0, t2=1;
+    cin >> n;
+    if(n==1){
+        cout<< t1 <<" ";
+    }else{
+        cout << t1 << " " << t2 << " ";
+        for(i=0;i<n-2;i++){
+            next_num = t1+t2;
+            cout << next_num << " ";
+            t1 = t2;
+            t2 = next_num;
+
         }
     }
-
     return 0;
 }
-
-// Easy Fibonacchi
+// Easy Fibonacci
