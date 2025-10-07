@@ -19,7 +19,6 @@ int main() {
                 m=max(m,A[l]);
                 cout << m << " ";
             }
-            cout << "\n";
         }
         cout << endl;
     }
