@@ -2,7 +2,8 @@
 #include<string>
 using namespace std;
 int main(){
-    int n, n1=0, n2=1, next_fib;
+    int n;
+    long long n1=0, n2=1, next_fib;
     cin >> n;
     if(n==1){
         next_fib = n1;
@@ -15,4 +16,5 @@ int main(){
         }
     }
     cout << next_fib << endl;
+    return 0;
 }
