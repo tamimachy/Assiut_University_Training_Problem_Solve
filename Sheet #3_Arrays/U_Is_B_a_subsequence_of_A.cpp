@@ -9,23 +9,16 @@ int main(){
         cin >> a1[i];
     for(i=0;i<m;i++)
         cin >> a2[i];
-    bool flag;
-    for(i=0;i<m;i++){
-        flag = false;
-       for(j=0;j<n;j++){
-            if(a2[i]==a1[j]){
-                flag = true;
-                break;
-                cout << a2[i]<<"=" <<a1[j] << endl;
-            }else{
-                flag = false;
-            }
+    int flag=0;
+    for(i=0;i<n && flag<m;i++){
+        if(a1[i]==a2[flag]){
+            flag++;
         }
     }
-    if(!flag){
-        cout<<"NO"<<endl;
+    if(flag==m){
+        cout<<"YES"<<endl;
     }else{
-        cout << "YES" << endl;
+        cout << "NO" << endl;
     }
 
     return 0;
