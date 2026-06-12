@@ -1,6 +1,18 @@
 #include<bits/stdc++.h>
 #include<algorithm>
 #include <vector>
+/*int palindrome(long long arr[]){
+    int left = 0;
+    int right = arr.size() - 1;
+    while(left < right){
+        if(arr[left] != arr[right]){
+            return -1;
+        }
+        left +=1;
+        right -=1;
+    }
+    return 1;
+} */
 using namespace std;
 int main(){
     int t, a,b,i;
@@ -10,10 +22,17 @@ int main(){
         cin >> n[i];
     }
     for(i=0;i<t;i++){
-        if(n[i]%12!=0 && n[i]<10){
-            cout << -1;
-        }else if()
+        a = i+1;
+        b = i%12;
+        if(n[i]==a && b == 0){
+            cout << a << " " << b << endl;
+        }else if(n[i] == 10){
+            cout << -1 << endl;
+        }else if(n[i]%12 == 10){
+            b = 12*(i+1);
+            //a = n[i] - b;
+            cout << " " << b << endl;
+        }
     }
-        cout << n[i] << " " ;
     return 0;
 }
